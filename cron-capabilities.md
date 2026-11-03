@@ -35,6 +35,8 @@ These are generalized capability patterns, not a literal dump of any one person'
 | Personal maintenance reminder | Recurring personal maintenance reminder. |
 | Domain status and expiry watch | Checks registration, lock, and expiry status and sends expiry reminders. |
 
+Additional setup prompts: [learning, home, travel, media, research, and saved links](additional-capabilities.md).
+
 ## Public Setup Prompt Families
 
 Each prompt family is written for someone asking their own OpenClaw or Hermes agent to stand up the capability. Replace bracketed placeholders before use.
@@ -47,6 +49,7 @@ Consolidates:
 - time-sensitive email response watch
 - actionable email scan
 - deadline fallback/escalation
+- waiting-on-reply nudges
 
 ```text
 Set up an email triage and deadline-watch capability.
@@ -74,6 +77,7 @@ Create one or more crons as needed:
 1. General actionable-email scan during my chosen waking window.
 2. Optional focused watcher for a specific thread/sender/topic.
 3. Optional one-shot deadline fallback that rechecks once and tells me to escalate if there is still no reply.
+4. Optional waiting-on-reply digest: find my outbound requests still awaiting a human response after an agreed business-day interval. Recheck full threads and related replies; exclude automated mail, resolved requests, and messages that did not ask for a response. Agree on holiday handling, a per-thread cooldown, and an age limit. Remind me without automatically drafting or sending follow-ups.
 
 Rules:
 - Run deterministic search/gate logic first.

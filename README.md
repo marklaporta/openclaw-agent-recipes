@@ -6,7 +6,8 @@ The recipes show generalized automation patterns for personal agents while avoid
 
 ## Contents
 
-- [Cron capabilities](cron-capabilities.md): concise summaries of agent cron patterns plus setup prompts for recreating similar capabilities.
+- [Cron capabilities](cron-capabilities.md): core automation patterns and setup prompts.
+- [More capabilities](additional-capabilities.md): learning reports, school photos, conversation prompts, flight watches, home monitoring, earthquake alerts, media recommendations, release planning, research briefings, and saved links.
 
 Each setup prompt is designed to have the agent explain the capability, ask the end user what they want customized, recommend defaults, and only then wire up the automation.
 
