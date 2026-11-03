@@ -125,3 +125,37 @@ Show only open items, with links and enough context to recognize why I saved the
 
 Keep authenticated, private, or token-bearing links out of public outputs. If an item cannot be retrieved, retain the saved reference and say so rather than inventing a summary.
 ```
+
+## 11. Family Photo Meme Generator
+
+```text
+Turn a photo stream of my choice into a private, searchable meme library and an on-demand meme-generation skill.
+
+Establish read-only access to my chosen album, folder, shared stream, or photo service; a private index location; and tools for visual review and image rendering. Reuse existing preferences for source scope, exclusions, humor, intended audience, and delivery. Establish which local or hosted tools may process the photos, and a review cadence and processing budget. If a source or tool is unavailable, identify the missing capability rather than claiming the workflow is connected.
+
+Index still images using stable source IDs and resolvable image pointers, not expiring download URLs or embedded credentials. Store source/version, review status, visible expressions and actions, composition, text/overlays, usable resolution, reaction tags, and caption-space notes. Attribute existing people labels to their source; do not infer identities from appearance. Keep visual observations separate from metadata-only inventory and hypothetical joke interpretations.
+
+Score every reviewed photo for meme potential: 0 unsuitable, 1 context-dependent, 2 useful, 3 standout. Save a reason based on reusable comic reaction or contrast, readability at phone size, framing, and dependence on original context; cuteness alone is not a high score. Record likely comic perspectives, such as the pictured subject's imagined inner monologue, the photographer's viewpoint, or an observer's reaction, with suggested situations and why they fit. These are caption angles, not claims about anyone's actual thoughts or feelings.
+
+Make ingestion incremental and restart-safe: deduplicate by source ID/version, retain completed enrichment, retry unavailable images without inventing labels, and process new or changed assets rather than relabeling the entire library. Track reviewed, pending, and unavailable counts separately. Preserve originals; keep generated derivatives linked to their source. Store explicit user ratings, rejected images, and recent selections to improve future choices.
+
+Create and wire up a reusable skill triggered by requests for family-photo memes or new photo options. It must search the enriched index by the requested situation, reaction, and perspective; retrieve and visually inspect candidates; and distinguish genuinely new photos from new captions on an old selection. For options, return distinct numbered photos with one caption each. For finished memes, render the requested number of distinct selected images with exact captions, preserving expressions and keeping lettering clear of faces. Retain source provenance and deliver each result only once to the authorized destination.
+
+Keep photos, thumbnails, names, source pointers, enrichment, feedback, and generated memes private and outside public repositories. Share only generic setup instructions or synthetic examples. Verify a small end-to-end sample: source retrieval, saved enrichment, incremental rerun without duplicates or lost reviews, index-based selection, and one requested rendered result. Report any unverified integration instead of presenting it as working.
+```
+
+## 12. Driveway Arrival And Help Alerts
+
+```text
+Recognize selected vehicles arriving in my driveway and send a timely private alert so someone can go out to help.
+
+Establish authorized camera/event access with license-plate recognition and directional entry detection, a driveway-only detection boundary, privately supplied vehicle labels and exact plate mappings, and the intended helpers and destination. Define whether the useful cue is inward entry or confirmed parking, plus any time-of-day or vehicle-specific rules. If the system cannot distinguish these events, report that limitation rather than enabling generic motion alerts as a substitute.
+
+Prefer native plate and directional events when supported. A plate read identifies a vehicle, not an arrival: associate the exact plate match with the same tracked vehicle's inward crossing or verified parking episode. Exclude street traffic, departures, already-parked vehicles, and repeated plate reads. Do not use fuzzy plate matches to assign a household identity, infer the driver or passengers, or interpret an unknown vehicle as a threat. If identity is uncertain, omit the name and send a generic arrival cue only if that fallback was requested.
+
+Send one short alert per physical arrival using the private vehicle label and the requested help cue, such as “Known vehicle arrived — someone available to help unload?” Deduplicate repeated events durably without suppressing a second distinct arrival close behind. Record confirmed delivery separately from detection, reconcile uncertain sends before retries, and do not replay stale arrivals after an outage. Report camera or event-stream failure separately from no arrivals.
+
+Let the alert prompt a person to respond. Contact or dispatch a helper automatically only under the user's explicit recipient and action rules; a plate match alone does not authorize paid services or emergency dispatch.
+
+Keep plate numbers, household mappings, camera links, credentials, locations, and footage private; alert text usually needs only the chosen vehicle label. Agree on retention for event evidence. Validate in shadow mode against a real inward arrival and street-pass, departure, parked-car reread, duplicate, and close-arrival cases before enabling notifications. Distinguish simulated checks from observed camera behavior, and verify the next live arrival's timing and single delivery.
+```
